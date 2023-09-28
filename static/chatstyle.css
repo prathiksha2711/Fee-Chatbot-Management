@@ -1,0 +1,195 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ddd;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
+
+.wrapper {
+    width: 370px;
+    border: 1px solid lightgrey;
+    background: #fff;
+    border-radius: 5px;
+    border-top: 0px;
+}
+
+.wrapper .title {
+    background: #007bff;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px 5px 0px 0px;
+    line-height: 50px;
+    border-bottom: 1px solid #006fe6;
+}
+
+.wrapper .form {
+    padding: 20px 15px;
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.wrapper .form .bot-inbox {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+
+.wrapper .form .user-inbox {
+    display: flex;
+    justify-content: flex-end;
+    margin: 13px 0;
+}
+
+.wrapper .form .bot-inbox .icon {
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    background: #007bff;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form .bot-inbox .msg-header p {
+    border: 1px solid lightgrey;
+    background: #007bff;
+    color: #fff;
+    padding: 8px 10px;
+
+    border-radius: 10px;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+#que {
+    width: 25%;
+    display: inline-flex;
+    align-items: baseline;
+    border: 1px solid lightgrey;
+    background: #007bff;
+    color: #fff;
+    padding: 5px 5px;
+    margin-left: 255px;
+    border-radius: 10px;
+    font-size: 14px;
+    word-break: break-all;
+    text-align: right;
+
+}
+
+.form .user-inbox .msg-header p {
+    color: #333;
+    background: #efefef;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.wrapper .form .bot-inbox .msg-header {
+    max-width: 53%;
+    margin-left: 10px;
+}
+
+.wrapper .form .user-inbox .msg-header {
+    max-width: 53%;
+    margin-left: 10px;
+}
+
+.wrapper .typing {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background: #efefef;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px solid #d9d9d9;
+    border-radius: 0 0 5px 5px;
+}
+
+.wrapper .typing .input_data {
+    height: 40px;
+    width: 335px;
+    position: relative;
+}
+
+.wrapper .typing .input_data input {
+    height: 100%;
+    width: 100%;
+    padding: 0 80px 0 15px;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 3px;
+    font-size: 15px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.typing .input_data input:focus {
+    border-color: rgba(0, 123, 255, 0.8);
+}
+
+.input_data input::placeholder {
+    color: #999999;
+    transition: all 0.3s ease;
+}
+
+.input_data input:focus::placeholder {
+    color: #bfbfbf;
+}
+
+.wrapper .typing .input_data button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    height: 30px;
+    width: 65px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    background: #007bff;
+    border: 1px solid #007bff;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.wrapper .typing .input_data input:valid~button {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.typing .input_data button:hover {
+    background: #006fef;
+}

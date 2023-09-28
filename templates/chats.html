@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Chatbot</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='chatstyle.css')}}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="title">
+                Chatbot</div>
+            <div class="form">
+                {%for post in query%}
+
+                <div id="que" class="userinbox">
+
+                    <p>{{post.messages}}</p>
+                </div>
+
+                <div class="bot-inbox">
+                    <div class="icon">
+                        <img src="data:image/png;base64,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"
+                            class="icon">
+                    </div>
+
+
+
+                    <div class="msg-header">
+                        <p>{{post.reply}}</p>
+
+
+                    </div>
+
+
+                </div>
+
+                {%endfor%}
+            </div>
+            <div class="typing">
+                <div class="input_data">
+                    <form action="/chatbot" method='post'>
+                        <input id="data" type="text" name="bots" placeholder="Type something here..">
+                        <button id="send-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $("#send-btn").on("click", function () {
+                    $value = $("#data").val();
+                    $msg = '<div class="userinbox"><p>' + $value +
+                        '</p></div></div>';
+                    $(".form").append($msg);
+                    $("#data").val('');
+                });
+            });
+
+            $(function () {
+                        $('#send-btn').click(function (e) {
+                                e.preventDefault();
+
+                                var bots = $("#data").val();
+                                alert("data: $(bots)");
+                            }
+
+                        });
+
+        </script>
+        <div class="homes">
+          <a href="/">Home</a>
+        </div>
+        
+
+    </body>
+
+</html>

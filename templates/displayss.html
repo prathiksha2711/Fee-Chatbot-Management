@@ -1,0 +1,39 @@
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>display</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='displayfee.css')}}">
+
+    <body>
+        <h1>Fee Structure</h1>
+        <table>
+            <tr>
+                <thead>
+                    <th><b>slno</b></th>
+                    <th><b>year</b></th>
+                    <th><b>batch</b></th>
+                    <th><b>cet</b></th>
+                    <th><b>comedk</b></th>
+                    <th><b>snq</b></th>
+                    <th><b>management</b></th>
+                </thead>
+            </tr>
+            {%for post in query%}
+            <tr>
+                <tbody>
+                    <td>{{post.slno}}</td>
+                    <td>{{post.year}}</td>
+                    <td class="cell">{{post.batch}}</td>
+                    <td>{{post.cet}}</td>
+                    <td>{{post.comedk}}</td>
+                    <td>{{post.snq}}</td>
+                    <td>{{post.management}}</td>
+                </tbody>
+            </tr>
+            {%endfor%}
+        </table>
+    </body>
+
+</html>

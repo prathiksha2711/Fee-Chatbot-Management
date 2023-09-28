@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #a1cde2;
+    border-radius: 30px;
+    font-size: 2em;
+    height: 50px;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: black;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #6cdff3, #6432ec);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.backgrnd {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://image.shutterstock.com/image-vector/global-internet-network-security-digital-260nw-604575887.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-right: 30px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 70px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(243, 252, 253);
+    font-size: 28px;
+}
+
+@media(max-width:768px) {
+    nav,
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.form-container {
+    width: 380px;
+    height: 560px;
+    background-color: rgb(243, 252, 253);
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 black;
+    margin: 5% auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.username {
+    padding: 10px 10px 10px 0px;
+    margin: 5px 0px 20px 0px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #999;
+    outline: none;
+    font-size: 1em;
+}
+
+.email {
+    padding: 10px 10px 10px 0px;
+    margin: 5px 0px 20px 0px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #999;
+    outline: none;
+    font-size: 1em;
+}
+
+.first-name {
+    padding: 10px 10px 10px 0px;
+    margin: 5px 0px 20px 0px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #999;
+    outline: none;
+    font-size: 1em;
+}
+
+.last-name {
+    padding: 10px 10px 10px 0px;
+    margin: 5px 0px 20px 0px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #999;
+    outline: none;
+    font-size: 1em;
+}
+
+.password {
+    padding: 10px 10px 10px 0px;
+    margin: 5px 0px 20px 0px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #999;
+    outline: none;
+    font-size: 1em;
+}
+
+.submit {
+    color: black;
+    width: 50%;
+    padding: 10px 10px 10px 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.username:hover {
+    border-color: black;
+    color: black;
+    cursor: pointer;
+}
+
+.password:hover {
+    border-color: black;
+    color: black;
+    cursor: pointer;
+}
+
+.first-name:hover {
+    border-color: black;
+    color: black;
+    cursor: pointer;
+}
+
+.last-name:hover {
+    border-color: black;
+    color: black;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: black;
+    color: black;
+    box-shadow: 0 0.5em 0.5em -0.4em #0e30ca;
+    cursor: pointer;
+}
+
+.submit {
+    background: linear-gradient(to right, #60daf0, #6432ec);
+    margin-left: 90px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.input-group-login {
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-group-register {
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+#register {
+    left: 450px;
+}
+
+#register input {
+    color: black;
+    font-size: 15;
+}
+
+#login {
+    left: 50px;
+}
+
+#login input {
+    color: black;
+    font-size: 15;
+}
+
+#login-form {
+    display: none;
+}
+
+.toggle-btn::before {
+    transform: translateX(50px);
+}

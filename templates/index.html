@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>display</title>
+  </head>
+  <body>
+    <p>display</p>
+    <table>
+        <tr>
+            <thead>
+                <th>id</th>
+                <th>queries</th>
+                <th>replies</th>
+            </thead>
+        </tr>
+        {%for post in query%}
+        <tr>
+            <tbody>
+                <td>{{post.reply}}</td>
+            </tbody>
+        </tr>
+        {% endfor %}
+
+    </table>
+  </body>
+</html>
